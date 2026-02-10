@@ -43,7 +43,7 @@ const Login = () => {
     const responseMessage = (response) => {
       const user = decodeToken(response.credential);
       axios
-        .post("https://meraki-academy-project-5-qxxn.onrender.com/users/register", {
+        .post("https://meraki-academy-project-5-forked.vercel.app/users/register", {
           firstName: user.given_name,
           lastName: user.family_name,
           email: user.email,
@@ -53,7 +53,7 @@ const Login = () => {
         })
         .then((result) => {
           axios
-            .post("https://meraki-academy-project-5-qxxn.onrender.com/users/login", {
+            .post("https://meraki-academy-project-5-forked.vercel.app/users/login", {
               email: user.email,
               password: user.sub,
             })
@@ -82,7 +82,7 @@ const Login = () => {
         .catch((err) => {
           if (err.response.data.message === "The email already exists") {
             axios
-              .post("https://meraki-academy-project-5-qxxn.onrender.com/users/login", {
+              .post("https://meraki-academy-project-5-forked.vercel.app/users/login", {
                 email: user.email,
                 password: user.sub,
               })
@@ -119,7 +119,7 @@ const Login = () => {
           if(!email || !password){
             setMessage("Conn't Send Empty Data")
           }else{
-            axios.post("https://meraki-academy-project-5-qxxn.onrender.com/users/login", {
+            axios.post("https://meraki-academy-project-5-forked.vercel.app/users/login", {
               email,
               password,
             }).then((result)=>{
@@ -149,7 +149,7 @@ const Login = () => {
     
     const demo = ()=>{
 
-      axios.post("https://meraki-academy-project-5-qxxn.onrender.com/users/login", {
+      axios.post("https://meraki-academy-project-5-forked.vercel.app/users/login", {
         email :"nutrifit@gmail.com",
         password : "1234",
       }).then((result)=>{

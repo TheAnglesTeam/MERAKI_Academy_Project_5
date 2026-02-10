@@ -37,7 +37,7 @@ const PrivatePlan = () => {
     const getAllPlans = () => {
       setPlanLoader(true)
         axios
-          .get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/plan/${coachid}`, {
+          .get(`https://meraki-academy-project-5-forked.vercel.app/coachs/plan/${coachid}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -61,7 +61,7 @@ const PrivatePlan = () => {
 const getCoachInfo=()=>{
   setPicLoader(true)
   setNameLoader(true)
-    axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/${coachid}`, {
+    axios.get(`https://meraki-academy-project-5-forked.vercel.app/users/info/${coachid}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

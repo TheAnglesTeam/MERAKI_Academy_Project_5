@@ -58,10 +58,9 @@ const UserInfo  = () => {
 const createUserInfo =async()=>{
   if(weight&&height&&goal){
     try {
-        const result =await axios.post(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/create`, 
+        const result =await axios.post(`https://meraki-academy-project-5-forked.vercel.app/users/info/create`, 
 
         {
-
           image , 
           weight,
           height,

@@ -34,9 +34,9 @@ function PlanGym() {
         }
       },[state.theme]);
     useEffect(()=>{
-        axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/${gymid}`,config).then((result) => {
+        axios.get(`https://meraki-academy-project-5-forked.vercel.app/gyms/${gymid}`,config).then((result) => {
             setDataGym(result.data.oneGym);
-            axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/plan/${gymid}`,config).then((resultPlan) => {
+            axios.get(`https://meraki-academy-project-5-forked.vercel.app/gyms/plan/${gymid}`,config).then((resultPlan) => {
                 resultPlan.data.plans.map((e,i)=>{
                     if(e.name_plan === 'Lite'){
                         setDataLitePlan(e);

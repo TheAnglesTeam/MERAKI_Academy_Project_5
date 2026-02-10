@@ -46,7 +46,7 @@ function Home() {
     headers: { Authorization: `Bearer ${token}` }
   }
 useEffect(()=>{
-  axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/${userId}`,config).then((result)=>{
+  axios.get(`https://meraki-academy-project-5-forked.vercel.app/users/info/${userId}`,config).then((result)=>{
     if(!result.data.success){
       console.log(result);
       navigate('/userinfo')

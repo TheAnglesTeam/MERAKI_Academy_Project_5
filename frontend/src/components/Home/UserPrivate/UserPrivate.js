@@ -58,7 +58,7 @@ const UserPrivate = () => {
 
   useEffect(()=>{
     setAllMessages([])
-    axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/message/${from}/${userId}`,{headers:{
+    axios.get(`https://meraki-academy-project-5-forked.vercel.app/coachs/message/${from}/${userId}`,{headers:{
       Authorization:`Bearer ${token}`
     }}).then((result)=>{
       setAllMessages(result.data.messages)
@@ -69,7 +69,7 @@ const UserPrivate = () => {
 
   useEffect(() => {
     axios
-      .get(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/${userId}`, {
+      .get(`https://meraki-academy-project-5-forked.vercel.app/users/info/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -123,7 +123,7 @@ const UserPrivate = () => {
 
   const getAllCoachs = () => {
     axios
-      .get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/coach`, {
+      .get(`https://meraki-academy-project-5-forked.vercel.app/coachs/coach`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

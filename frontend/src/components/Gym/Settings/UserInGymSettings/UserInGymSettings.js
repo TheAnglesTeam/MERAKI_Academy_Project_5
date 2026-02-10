@@ -28,7 +28,7 @@ function UserInGymSettings() {
     headers: { Authorization: `Bearer ${state.token}` }
   }
   useEffect(()=>{
-    axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/${gymid}/user`, config).then((result) => {
+    axios.get(`https://meraki-academy-project-5-forked.vercel.app/gyms/${gymid}/user`, config).then((result) => {
       setUserInGym(result.data.users);
       setFillterArray(result.data.users);
     }).catch((err) => {
@@ -132,7 +132,7 @@ function UserInGymSettings() {
             No
           </Button>
           <Button style={{backgroundColor:"#A1E533", color:"#101010",fontWeight:"bold",border:"0"}} onClick={()=>{
-            axios.post(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/gym/coach`, {gymId : gymid, coachId : userInGym[indexUserInArr].user_id}, config).then((result) => {
+            axios.post(`https://meraki-academy-project-5-forked.vercel.app/gyms/gym/coach`, {gymId : gymid, coachId : userInGym[indexUserInArr].user_id}, config).then((result) => {
               userInGym.splice(indexUserInArr, 1);
               handleClose()
             }).catch((err) => {

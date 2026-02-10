@@ -35,7 +35,7 @@ function PaymentPlan() {
         }
       },[state.theme]);
     useEffect(()=>{
-        axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/plan/${planid}/select`, config).then((result) => {
+        axios.get(`https://meraki-academy-project-5-forked.vercel.app/gyms/plan/${planid}/select`, config).then((result) => {
             setDataPlanForInvoice(result.data.plan);
             setTotalPrice(Number(result.data.plan.price_plan)+0.48)
         }).catch((err) => {
@@ -45,7 +45,7 @@ function PaymentPlan() {
     },[])
     const handlePay = ()=>{
         if(numberCard && nameOnCard && expirationDate && cVV){
-            axios.post(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/gym/user`, 
+            axios.post(`https://meraki-academy-project-5-forked.vercel.app/gyms/gym/user`, 
             {gymId : gymid, planId : planid, numOfMonth : dataPlanForInvoice.numofmonth_plan, userId: state.userId},
             config).then((result) => {
                 navigate(`/gym/${gymid}`);

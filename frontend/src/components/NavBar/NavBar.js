@@ -38,7 +38,7 @@ function NavBar() {
     headers: { Authorization: `Bearer ${state.token}` }
   }
   useEffect(()=>{
-    axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/${state.userId}`, config).then((result) => {
+    axios.get(`https://meraki-academy-project-5-forked.vercel.app/users/info/${state.userId}`, config).then((result) => {
       localStorage.setItem("userImage", result.data.info.image);
     }).catch((err) => {
     });

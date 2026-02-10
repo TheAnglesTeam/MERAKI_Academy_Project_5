@@ -24,7 +24,7 @@ function CreateGym() {
 
     const createGym = ()=>{
       if(name && description){
-          axios.post("https://meraki-academy-project-5-qxxn.onrender.com/gyms", {name, description}, config).then((result) => {
+          axios.post("https://meraki-academy-project-5-forked.vercel.app/gyms", {name, description}, config).then((result) => {
             console.log(result);
             navigate(-1);
           }).catch((err) => {

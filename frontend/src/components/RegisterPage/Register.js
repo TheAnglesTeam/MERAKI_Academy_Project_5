@@ -21,7 +21,7 @@ const Register = () => {
   const [message, setMessage] = useState("")
   const createNewAccount=()=>{
     if(firstName&& lastName&& age&& gender&& email&&password&&roleId){
-        axios.post("https://meraki-academy-project-5-qxxn.onrender.com/users/register",{ firstName, lastName, age, gender, email, password,role_id:roleId }).then((result)=>{
+        axios.post("https://meraki-academy-project-5-forked.vercel.app/users/register",{ firstName, lastName, age, gender, email, password,role_id:roleId }).then((result)=>{
       if(result.data.success){
         setSuccess(true)
         setMessage(result.data.message)

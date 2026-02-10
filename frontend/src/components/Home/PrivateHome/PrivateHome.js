@@ -35,7 +35,7 @@ const PrivateHome = () => {
   }, []);
 const getAllCoachesByUserId =()=>{
   setUserLoading(true)
-  axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/coach`, {
+  axios.get(`https://meraki-academy-project-5-forked.vercel.app/coachs/coach`, {
     headers: {
       Authorization: `Bearer ${authState.token}`,
     },
@@ -52,7 +52,7 @@ const getAllCoachesByUserId =()=>{
 
   const getAllCoaches = () => {
     setCoachLoading(true)
-    axios.get("https://meraki-academy-project-5-qxxn.onrender.com/coachs/filter/", {
+    axios.get("https://meraki-academy-project-5-forked.vercel.app/coachs/filter/", {
       headers: {
         Authorization: `Bearer ${authState.token}`,
       },

@@ -20,7 +20,7 @@ function AllGymHome() {
       headers: { Authorization: `Bearer ${state.token}` }
     }
     useEffect(()=>{
-      axios.get('https://meraki-academy-project-5-qxxn.onrender.com/gyms', config).then((result) => {
+      axios.get('https://meraki-academy-project-5-forked.vercel.app/gyms', config).then((result) => {
         setAllGym(result.data.gym);
         console.log(result.data.gym);
       }).catch((err) => {

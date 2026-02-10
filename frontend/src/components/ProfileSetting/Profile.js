@@ -46,7 +46,7 @@ const Profile = () => {
   }, []);
   const getUserInfoByUserId = () => {
     axios
-      .get(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/${state.userId}`, {
+      .get(`https://meraki-academy-project-5-forked.vercel.app/users/info/${state.userId}`, {
         headers: {
           Authorization: `Bearer ${state.token}`,
         },
@@ -62,7 +62,7 @@ const Profile = () => {
 
   const updateUserInfo = async () => {
     try {
-      const result =await axios.put(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/${state.userId}`, {
+      const result =await axios.put(`https://meraki-academy-project-5-forked.vercel.app/users/info/${state.userId}`, {
         image ,
         weight,
         height,

@@ -27,7 +27,7 @@ function CoachInGymSettings() {
   }
 
   useEffect(()=>{
-    axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/${gymid}/coach`, config).then((result) => {
+    axios.get(`https://meraki-academy-project-5-forked.vercel.app/gyms/${gymid}/coach`, config).then((result) => {
       setCoachInGym(result.data.coachs);
       setFillterArray(result.data.coachs);
     }).catch((err) => {
@@ -107,7 +107,7 @@ function CoachInGymSettings() {
         <Modal.Body>you are sure? please choose the plan</Modal.Body>
         <Modal.Footer>
           <Button style={{backgroundColor:"gray", color:"white",fontWeight:"bold", border:"0"}} onClick={()=>{
-            axios.post(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/coach/down`, { gymid , userid : coachsInGym[indexUserInArr].coach_id, name_plan : "Lite"}, config).then((result) => {
+            axios.post(`https://meraki-academy-project-5-forked.vercel.app/gyms/coach/down`, { gymid , userid : coachsInGym[indexUserInArr].coach_id, name_plan : "Lite"}, config).then((result) => {
               coachsInGym.splice(indexUserInArr, 1);
               handleClose()
             }).catch((err) => {
@@ -117,7 +117,7 @@ function CoachInGymSettings() {
             Lite
           </Button>
           <Button style={{backgroundColor:"gold", color:"#101010",fontWeight:"bold", border:"0"}} onClick={()=>{
-            axios.post(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/coach/down`, { gymid , userid : coachsInGym[indexUserInArr].coach_id, name_plan : "Gold"}, config).then((result) => {
+            axios.post(`https://meraki-academy-project-5-forked.vercel.app/gyms/coach/down`, { gymid , userid : coachsInGym[indexUserInArr].coach_id, name_plan : "Gold"}, config).then((result) => {
               coachsInGym.splice(indexUserInArr, 1);
               handleClose()
             }).catch((err) => {
@@ -127,7 +127,7 @@ function CoachInGymSettings() {
             Gold
           </Button>
           <Button style={{backgroundColor:"#A1E533", color:"#101010",fontWeight:"bold",border:"0"}} onClick={()=>{
-            axios.post(`https://meraki-academy-project-5-qxxn.onrender.com/gyms/coach/down`, { gymid , userid : coachsInGym[indexUserInArr].coach_id, name_plan : "Premium"}, config).then((result) => {
+            axios.post(`https://meraki-academy-project-5-forked.vercel.app/gyms/coach/down`, { gymid , userid : coachsInGym[indexUserInArr].coach_id, name_plan : "Premium"}, config).then((result) => {
               coachsInGym.splice(indexUserInArr, 1);
               handleClose()
             }).catch((err) => {

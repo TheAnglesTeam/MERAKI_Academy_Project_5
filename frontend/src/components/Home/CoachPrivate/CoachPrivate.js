@@ -88,7 +88,7 @@ const handleImageClick = () => {
 
 useEffect(()=>{
   setAllMessages([])
-  axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/message/${userId}/${toId}`,{headers:{
+  axios.get(`https://meraki-academy-project-5-forked.vercel.app/coachs/message/${userId}/${toId}`,{headers:{
     Authorization:`Bearer ${token}`
   }}).then((result)=>{
     setAllMessages(result.data.messages)
@@ -107,7 +107,7 @@ useEffect(()=>{
 
 
 useEffect(()=>{
-  axios.get(`https://meraki-academy-project-5-qxxn.onrender.com/users/info/${userId}`,{headers:{
+  axios.get(`https://meraki-academy-project-5-forked.vercel.app/users/info/${userId}`,{headers:{
     Authorization:`Bearer ${token}`
   }}).then((result)=>{
     setImage(result.data.info.image)
@@ -156,7 +156,7 @@ const disconnectServer = ()=>{
   const removeUserFromPrivate = (user_id, coach_id) => {
     axios
       .put(
-        `https://meraki-academy-project-5-qxxn.onrender.com/coachs/user/remove`,
+        `https://meraki-academy-project-5-forked.vercel.app/coachs/user/remove`,
         { user_id: user_id, coach_id: coach_id },
         {
           headers: {
@@ -173,7 +173,7 @@ const disconnectServer = ()=>{
   };
   const getAllUsers = () => {
     axios
-      .get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/user`, {
+      .get(`https://meraki-academy-project-5-forked.vercel.app/coachs/user`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -41,7 +41,7 @@ const Settings = () => {
 
   const getAllPlans = () => {
     axios
-      .get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/plan/${userId}`, {
+      .get(`https://meraki-academy-project-5-forked.vercel.app/coachs/plan/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ const Settings = () => {
   };
   const updatePlan=(name)=>{
     setAbeled(true);
-    axios.put(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/plan`,{name:name,description,numOfMonth,price}, {
+    axios.put(`https://meraki-academy-project-5-forked.vercel.app/coachs/plan`,{name:name,description,numOfMonth,price}, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -83,7 +83,7 @@ const Settings = () => {
     })
   }
   const deletePlan=(name)=>{
-    axios.put(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/remove/plan`,{name}, {
+    axios.put(`https://meraki-academy-project-5-forked.vercel.app/coachs/remove/plan`,{name}, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -98,7 +98,7 @@ const Settings = () => {
   }
   const disActivePrivate = () => {
     axios
-      .get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/private/disactive`, {
+      .get(`https://meraki-academy-project-5-forked.vercel.app/coachs/private/disactive`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -123,7 +123,7 @@ const Settings = () => {
     if (name && description && price && numOfMonth) {
       axios
         .post(
-          `https://meraki-academy-project-5-qxxn.onrender.com/coachs/plan`,
+          `https://meraki-academy-project-5-forked.vercel.app/coachs/plan`,
           { name: name, description, price, numOfMonth },
           {
             headers: {
@@ -152,7 +152,7 @@ const Settings = () => {
 
   const activePrivateFun = () => {
     axios
-      .get(`https://meraki-academy-project-5-qxxn.onrender.com/coachs/private`, {
+      .get(`https://meraki-academy-project-5-forked.vercel.app/coachs/private`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
